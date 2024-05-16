@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Sumas</title>
+    <link rel="stylesheet" href="../css/estiloS.css">
+</head>
+<body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="registro">
+        <h2>¡Bienvenido!</h2>
+        <form id="formRegistro">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="codigo">Código:</label>
+                <input type="text" id="codigo" required>
+            </div>
+            <button type="submit">Iniciar Prueba</button>
+        </form>
+    </div>
+    <div class="container" style="display: none;">
+        <div class="izquierdo">
+            <div class="container-operacion">
+                <span id="operacion">10 + 5 =</span>
+                <span class="resultado" id="resultado"> ?</span>
+             </div>
+             <span class="msj" id="msj"></span>
+        </div>
+        <div class="derecha">
+            <span id="op1" class="opcion" onclick="controlarRespuesta(this)">15</span>
+            <span id="op2" class="opcion" onclick="controlarRespuesta(this)">12</span>
+            <span id="op3" class="opcion" onclick="controlarRespuesta(this)">8</span>
+        </div>
+    </div>
+    <div id="resultadoFinal" style="display: none;">
+        <h2>Resultado de la prueba:</h2>
+        <p id="promedio"></p>
+        <p  id="retroalimentacion"></p>
+        <button id="btn_mostrarRespuestas" style="display: none;">Mostrar Respuestas</button>
+        <button id="btn_irTaller"  style="display: none; text-decoration: none; color: aliceblue;" ><a href="tallerSumas.html" style="text-decoration: none; color:aliceblue; ">Ir al taller</a></button>
+    </div>
+    <div id="respuestas" style="display: none;">
+        <h2>Respuestas:</h2>
+        <ul id="listaRespuestas"></ul>
+    </div>
+    <script src="../js/scriptS.js"></script>
+</body>
+</html>
+

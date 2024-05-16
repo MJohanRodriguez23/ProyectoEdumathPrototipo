@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito';
+}
+
+body {
+    text-align: center;
+    color: #262626;
+    background: url(https://png.pngtree.com/background/20210712/original/pngtree-cute-hand-drawn-style-math-education-blue-plaid-background-picture-image_1176978.jpg);
+    background-size: cover;
+}
+
+h1 {
+    color: white;
+    padding: 50px;
+}
+
+.container, .registro {
+    background-color: #dd2222;
+    max-width: 700px;
+    margin: auto;
+    border: 2px solid #000;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.registro {
+    margin-top: 50px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    width: 200px;
+    height: 30px;
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.container {
+    display: none; /* Inicialmente oculto hasta que se complete el registro */
+}
+
+.izquierdo {
+    width: 100%;
+    font-size: 40px; /* Aumentamos el tamaño del texto */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-operacion {
+    margin-bottom: 20px;
+}
+
+.derecha {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.msj {
+    font-size: 30px; /* Ajustamos el tamaño del mensaje */
+    height: 50px;
+}
+
+.opcion {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #000;
+    font-size: 40px; /* Aumentamos el tamaño de las opciones */
+    margin-right: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #000;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.opcion:hover {
+    background-color: #262626;
+}
+
+#respuestas {
+    margin-top: 20px;
+}
+
+#listaRespuestas {
+    list-style: none;
+    padding: 0;
+}
+
+#listaRespuestas li {
+    margin-bottom: 5px;
+}
