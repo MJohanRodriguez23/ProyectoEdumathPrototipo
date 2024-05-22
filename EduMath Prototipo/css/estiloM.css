@@ -7,7 +7,7 @@
 
 body {
     text-align: center;
-    color: #262626;
+    color: #000000;
     background: url(https://png.pngtree.com/background/20210712/original/pngtree-cute-hand-drawn-style-math-education-blue-plaid-background-picture-image_1176978.jpg);
     background-size: cover;
 }
@@ -18,7 +18,7 @@ h1 {
 }
 
 .container, .registro {
-    background-color: #9bcef3;
+    background-color: #221fc9;
     max-width: 700px;
     margin: auto;
     border: 2px solid #000;

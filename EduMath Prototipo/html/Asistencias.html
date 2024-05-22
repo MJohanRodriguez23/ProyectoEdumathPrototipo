@@ -5,382 +5,449 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asistencias - Aprendiendo Matemáticas</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        /* Mejoras en los estilos de tu archivo CSS */
 
-        body {
-            font-family: 'Roboto', sans-serif;
-        }
+/* Paleta de colores */
+:root {
+    --primary-color: #000000;
+    --secondary-color: #ffffff;
+    --background-color: #F8F9FA;
+    --text-color: #333333;
+    --hover-color: #74A9EA;
+    --accent-color: #221fc9;
+}
 
-        h1 {
-            font-size: 50px;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        .contenedor {
-            width: 90%;
-            max-width: 1400px;
-            margin: auto;
-            overflow: hidden;
-        }
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
 
-        /* ############## MENU DE NAVEGACIÓN ############## */
+h1 {
+    font-size: 55px;
+}
 
-        header::before {
-            content: "";
-            display: block;
-            margin-bottom: 80px;
-        }
+h3 {
+    color:#221fc9;
+}
 
-        nav {
-            width: 100%;
-            height: 80px;
-            background-color: #9bcef3;
-            border-bottom: 1px solid transparent;
-            box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, .2);
-            position: fixed;
-            top: 0;
-            z-index: 100;
-        }
+.contenedor {
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+    overflow: hidden;
+}
 
-        .nav {
-            display: flex;
-            height: 80px;
-            width: 100%;
-            align-items: center;
-        }
+/* ############## MENU DE NAVEGACIÓN ############## */
 
-        .enlaces-header {
-            font-weight: 300;
-            margin: auto;
-            transition: all ease-in-out .6s;
-        }
+header::before {
+    content: "";
+    display: block;
+    margin-bottom: 80px;
+}
 
-        .nav .enlaces-header a {
-            color: #5d6678;
-            text-decoration: none;
-            margin-left: 20px;
-            padding: 12px;
-            border-radius: 10px;
-        }
+nav {
+    width: 100%;
+    height: 80px;
+    background-color: var(--primary-color);
+    border-bottom: 1px solid transparent;
+    box-shadow: 1px 1px 10px 0 #221fc9;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
 
-        .nav .enlaces-header a:hover {
-            color: #fff;
-            background-color: #9bcef3;
-            border-color: #9bcef3;
-            transition: all ease-in-out .6s;
-        }
+.nav {
+    display: flex;
+    height: 80px;
+    width: 100%;
+    align-items: center;
+}
 
-        .hamburguer {
-            width: 80px;
-            height: 80px;
-            text-align: center;
-            cursor: pointer;
-            transition: all ease-in-out 0.5s;
-            z-index: 100;
-            display: none;
-        }
+.enlaces-header {
+    font-weight: 300;
+    margin: auto;
+    transition: all ease-in-out .6s;
+}
 
-        .hamburguer>i {
-            font-size: 25px;
-            line-height: 80px;
-        }
+.nav .enlaces-header a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 12px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
 
-        .titulospro {
-            text-align: left;
-            margin: 20px 0;
-        }
+.nav .enlaces-header a:hover {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+}
 
-        .contenido-header {
-            width: 80%;
-            height: 600px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            text-align: center;
-            margin: 0 auto;
-        }
+.hamburguer {
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    cursor: pointer;
+    transition: all ease-in-out 0.5s;
+    z-index: 100;
+    display: none;
+}
 
-        .contenido-header>img {
-            width: 300px;
-            height: 300px;
-            margin-left: 50px;
-            animation: ease-in animacion 0.5s;
-        }
+.hamburguer > i {
+    font-size: 25px;
+    line-height: 80px;
+}
 
-        @keyframes animacion {
-            0% {
-                transform: scale(0);
-            }
+.titulospro {
+    text-align: left;
+    margin: 20px 0;
+}
 
-            100% {
-                transform: scale(1);
-            }
-        }
+.contenido-header {
+    width: 80%;
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 
-        .textos-header {
-            margin: 0 0 0 30px;
-        }
+.contenido-header > img {
+    width: 300px;
+    height: 300px;
+    margin-left: 50px;
+    animation: ease-in animacion 0.5s;
+    border-radius: 50%;
+    border: 5px solid var(--secondary-color);
+}
 
-        .contenido-header p {
-            font-weight: 300;
-            margin-top: 14px;
-            color: #5d6678;
-            text-align: justify;
-        }
+@keyframes animacion {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 
-        .contenido-header a {
-            margin: 28px 0 0 0;
-            width: 150px;
-            display: inline-block;
-            background: #9bcef3;
-            text-align: center;
-            color: #fff;
-            padding: 12px 0;
-            text-decoration: none;
-            font-weight: 400;
-            text-transform: uppercase;
-            font-size: 16px;
-            border-radius: 5px;
-            box-shadow: 0 8px 32px rgba(97, 31, 31, 0.46);
-        }
+.textos-header {
+    margin: 0 0 0 30px;
+}
 
-        /* ############# SECTION EDUCACIÓN ############# */
-    .title{
+.contenido-header p {
+    font-weight: 300;
+    margin-top: 14px;
+    color: var(--secondary-color);
+    text-align: justify;
+}
+
+.btn-primary, .btn-secondary {
+    margin: 28px 0 0 0;
+    display: inline-block;
+    text-align: center;
+    color: var(--secondary-color);
+    padding: 12px 20px;
+    text-decoration: none;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 16px;
+    border-radius: 5px;
+    box-shadow: 0 8px 32px rgba(97, 31, 31, 0.46);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--hover-color);
+}
+
+.btn-secondary {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+}
+
+.btn-primary:hover {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background: var(--hover-color);
+    color: var(--secondary-color);
+}
+
+
+/* ############# SECTION EDUCACIÓN ############# */
+.title {
     margin-top: 50px;
     display: block;
     width: 100%;
     text-align: center;
-   }
+    color: var(--primary-color);
+}
 
-   .educacion {
-    background-color: #f2f2f2;
-    padding: 50px 0; /* Agregamos un espacio de relleno arriba y abajo */
-    text-align: center; /* Centramos el contenido horizontalmente */
-    }
+.educacion {
+    background-color: var(--background-color);
+}
 
-    .content-educacion {
+.content-educacion {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 50px;
     justify-content: space-around;
-    margin-bottom: 50px; /* Reducimos el margen inferior para separarlo del footer */
-    }   
+}
 
-    .articulo{
-        width: 40%;
-        background-color: #fff;
-        margin-top: 50px;
-        border-radius: 10px;
-        padding: 45px 30px 60px 30px;
-        transition: all ease-in-out .5s;
+.articulo {
+    width: 30%;
+    background-color: var(--secondary-color);
+    margin-top: 50px;
+    border-radius: 10px;
+    padding: 45px 30px 60px 30px;
+    transition: all ease-in-out .5s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
+    text-align: center;
+}
+
+.articulo:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, .2);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    transition: .5s;
+}
+
+.articulo > h3 {
+    font-size: 24px;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+.articulo > a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.articulo > a:hover {
+    color: var(--secondary-color);
+    transition: .5s;
+}
+
+.articulo > i {
+    font-size: 50px;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+
+/* SECTION FOOTER */
+
+footer {
+    background: rgb(70, 70, 70);
+    padding: 20px 0;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: auto;
+}
+
+.partFooter {
+    width: 22%;
+    text-align: center;
+}
+
+.partFooter img {
+    width: 60%;
+}
+
+.partFooter h4 {
+    color: var(--secondary-color);
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    background-color: var(--primary-color);
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid double var(--primary-color);
+}
+
+.contact {
+    margin: 10px;
+    display: block;
+    text-align: left;
+    color: var(--secondary-color);
+}
+
+.contact > i {
+    float: left;
+    margin-right: 10px;
+}
+
+.contact > p {
+    font-weight: 500;
+}
+
+.partFooter > a {
+    color: var(--secondary-color);
+    display: block;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-weight: 500;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.partFooter > a:hover {
+    background-color: var(--hover-color);
+}
+
+.social-media > a > i {
+    color: var(--secondary-color);
+    display: inline-block;
+    font-size: 25px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    line-height: 36px;
+    text-align: center;
+    cursor: pointer;
+    transition: all ease-in-out .3s;
+    margin-right: 8px;
+}
+
+.social-media > a > i:hover {
+    background-color: var(--hover-color);
+}
+
+.partFooter img {
+    width: 40%;
+}
+
+/* Estilos mejorados para la tabla de asistencias */
+.articulo table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.articulo th, .articulo td {
+    border: 1px solid var(--primary-color);
+    padding: 12px;
+    text-align: center;
+}
+
+.articulo th {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.articulo td {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+.articulo tr:nth-child(even) {
+    background-color: var(--background-color);
+}
+
+
+/* ################################## MEDIA QUERYS ################################## */
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 25px;
     }
 
-    .articulo:hover{
-        box-shadow: 0 4px 10px rgba(17, 29, 48, .26);
-        color: #fff;
-        background-color: #9bcef3;
-        transition: .5s;
+    .contenido-header {
+        width: 100%;
+        height: 560px;
     }
 
-    .articulo > h3{
-        font-size: 24px;
-        margin-top: 10px;
+    .contenido-header > img {
+        width: 120px;
+        height: 120px;
+        animation: ease-in animacion 0.5s;
+        margin: 20px 0;
+    }
+
+    .articulo, .experience, .certificate, .skills {
+        width: 90%;
+    }
+
+    .skills {
+        margin-bottom: 20px;
+    }
+
+    .articulo, .experience, .content-skills {
+        margin-top: 20px;
+    }
+
+    .content-skills {
+        margin-bottom: 20px;
+    }
+
+    .content-certificados {
+        padding: 0;
+        margin-bottom: 30px;
+    }
+
+    .certificate {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .enlaces-header {
+        position: fixed;
+        background-color: var(--primary-color);
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        clip-path: circle(0% at 0 0);
+    }
+
+    .nav .enlaces-header a {
+        color: var(--secondary-color);
+        background-color: var(--primary-color);
         text-transform: uppercase;
+        font-weight: 800;
+        margin-top: 20px;
+        width: 50%;
+        text-align: center;
     }
 
-    .articulo > a{
-        text-decoration: none;
-        color: #000;
+    .nav .enlaces-header a:hover {
+        color: var(--primary-color);
+        background-color: var(--secondary-color);
     }
 
-    .articulo > a:hover{
-        color: #fff;
-        transition: .5s;
+    .hamburguer {
+        display: block;
     }
 
-    #especificacionesAsistencias {
-        height: 50px;
+    .nav .hamburgueropen {
+        clip-path: circle(150% at 0 0);
     }
+}
 
-            /* SECTION FOOTER */
-
-            footer {
-                background: rgb(70, 70, 70);
-                padding: 20px 0 /*50 0 20 0 */;
-                padding-top: 30px;
-                overflow: hidden;
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-evenly;
-                margin: auto;
-
-            }
-
-            .partFooter {
-                width: 22%;
-                text-align: center;
-            }
-
-            .partFooter img {
-                width: 60%;
-            }
-
-            .partFooter h4 {
-
-                color: white;
-                font-size: 20px;
-                font-weight: 400;
-                margin-bottom: 15px;
-                background-color: #9bcef3;
-                padding: 5px;
-                border-radius: 5px;
-                border: 1px solid double #9bcef3;
-            }
-
-            .contact {
-                margin: 10px;
-                display: block;
-                text-align: left;
-                color: #fff;
-            }
-
-            .contact>i {
-                float: left;
-                margin-right: 10px;
-            }
-
-            .contact>p {
-                font-weight: 500;
-            }
-
-            .partFooter>a {
-                color: #fff;
-                display: block;
-                text-decoration: none;
-                margin-bottom: 10px;
-                font-weight: 500;
-                padding: 5px;
-                border-radius: 5px;
-
-            }
-
-            .partFooter>a:hover {
-                background-color: #9bcef3;
-                transition: all ease-in-out .4s;
-
-            }
-
-            .social-media>a>i {
-                color: #fff;
-                display: inline-block;
-                font-size: 25px;
-                border: 2px solid #fff;
-                border-radius: 50%;
-                width: 38px;
-                height: 38px;
-                line-height: 36px;
-                text-align: center;
-                cursor: pointer;
-                transition: all ease-in-out .3s;
-                margin-right: 8px;
-            }
-
-            .social-media>a>i:hover {
-                background-color:#9bcef3;
-            }
-
-            .partFooter img {
-                width: 40%;
-            }
-
-            /* ################################## MEDIA QUERYS ################################## */
-            @media screen and (max-width: 600px) {
-                h1 {
-                    font-size: 25px;
-                }
-
-                .contenido-header {
-                    width: 100%;
-                    height: 560px;
-                }
-
-                .contenido-header>img {
-                    width: 120px;
-                    height: 120px;
-                    animation: ease-in animacion 0.5s;
-                    margin: 20px 0;
-                }
-
-                .articulo,
-                .experience,
-                .skills {
-                    width: 90%;
-                }
-
-                .skills {
-                    margin-bottom: 20px;
-                }
-
-                .articulo,
-                .experience,
-                .content-skills {
-                    margin-top: 20px;
-                }
-
-                .content-skills {
-                    margin-bottom: 20px;
-                }
-
-                .content-certificados {
-                    padding: 0;
-                    margin-bottom: 30px;
-                }
-
-                .certificate {
-                    margin: 10px;
-                    padding: 10px;
-                }
-
-                .enlaces-header {
-                    position: fixed;
-                    background-color: #9bcef3;
-                    top: 0;
-                    right: 0;
-                    width: 100%;
-                    height: 100vh;
-                    display: flex;
-                    align-items: center;
-                    flex-direction: column;
-                    clip-path: circle(0% at 0 0);
-
-                }
-
-                .nav .enlaces-header a {
-                    color: #fff;
-                    background-color: #9bcef3;
-                    text-transform: uppercase;
-                    font-weight: 800;
-                    margin-top: 20px;
-                    width: 50%;
-                    text-align: center;
-                }
-
-                .nav .enlaces-header a:hover {
-                    color: #9bcef3;
-                    background-color: #fff;
-                }
-
-                .hamburguer {
-                    display: block;
-                }
-
-                .nav .hamburgueropen {
-                    clip-path: circle(150% at 0 0);
-                }
-
-            }
         </style>
 </head>
 <body>
@@ -412,7 +479,9 @@
                     <table>
                         <thead>
                             <tr>
-                                <th id="especificacionesAsistencias">| Nombre | Codigo | Fecha | Hora |</th>
+                                <th id="especificacionesAsistencias">nombre</th>
+                                <th>Código</th>
+                                <th>Fecha y hora</th>
                             </tr>
                         </thead>
                         <tbody id="tablaAsistencias">
