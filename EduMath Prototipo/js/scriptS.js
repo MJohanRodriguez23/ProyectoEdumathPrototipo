@@ -125,6 +125,7 @@ function controlarRespuesta(opcionElegida){
         // Mostrar retroalimentación o resultado de la prueba
         if (promedioCorrectas >= 60) {
             alert("Felicidades, has aprobado la prueba sin necesidad de retroalimentación.");
+            mostrarResultados();
         } else {
             alert("Has obtenido un promedio de respuestas correctas del " + promedioCorrectas.toFixed(2) + "%. Te daremos retroalimentación en forma de taller.");
             mostrarResultados();
